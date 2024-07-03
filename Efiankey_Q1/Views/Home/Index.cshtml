@@ -2,16 +2,21 @@
     ViewData["Title"] = "Download";
 }
 
-<h1>Download</h1>
+<h1 class="mt-4">Download</h1>
 
-<form asp-action="CheckDownload" id="downloadForm" method="post">
-    <label for="memberType">Select Member Type:</label>
-    <select id="memberType" name="memberType">
-        <option value="nonmember">Non-member</option>
-        <option value="member">Member</option>
-    </select>
-    <button type="submit">Check Download</button>
-</form>
+<div class="container mt-4">
+    <form asp-action="CheckDownload" id="downloadForm" method="post" class="mb-4">
+        <div class="form-group">
+            <label for="memberType">Select Member Type:</label>
+            <select id="memberType" name="memberType" class="form-control">
+                <option value="nonmember">Non-member</option>
+                <option value="member">Member</option>
+            </select>
+        </div>
+        <br /><br />
+        <button type="submit" class="btn btn-primary">Check Download</button>
+    </form>
 
-<p id="result"></p>
+    <div id="result" class="alert mt-3" role="alert"></div>
+</div>
 
