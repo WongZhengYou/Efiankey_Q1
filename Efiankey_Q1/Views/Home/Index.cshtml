@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Download";
+}
+
+<h1>Download</h1>
+
+<form asp-action="CheckDownload" id="downloadForm" method="post">
+    <label for="memberType">Select Member Type:</label>
+    <select id="memberType" name="memberType">
+        <option value="nonmember">Non-member</option>
+        <option value="member">Member</option>
+    </select>
+    <button type="submit">Check Download</button>
+</form>
+
+<p id="result"></p>
+
